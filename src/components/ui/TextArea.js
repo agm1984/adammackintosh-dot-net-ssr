@@ -36,6 +36,7 @@ TextArea.defaultProps = {
   name: undefined,
   required: undefined,
   meta: undefined,
+  style: undefined,
 }
 TextArea.propTypes = {
   label: PropTypes.string,
@@ -55,6 +56,7 @@ TextArea.propTypes = {
     touched: PropTypes.bool,
     error: PropTypes.string,
   }),
+  style: PropTypes.objectOf(PropTypes.any),
 }
 
 export default TextArea

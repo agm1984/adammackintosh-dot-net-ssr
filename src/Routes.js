@@ -121,16 +121,7 @@ class Routes extends Component {
             if (!filterRoutes(location).length) {
               return (
                 <TransitionGroup appear>
-                  <Transition
-                    key="404"
-                    timeout={0}
-                    onEnter={() => console.log('notFound enter')}
-                    onEntering={() => console.log('notFound entering')}
-                    onEntered={() => console.log('notFound entered')}
-                    onExit={() => console.log('notFound exit')}
-                    onExiting={() => console.log('notFound exiting')}
-                    onExited={() => console.log('notFound exited')}
-                  >
+                  <Transition key="404" timeout={500}>
                     <NotFound location={location} />
                   </Transition>
                 </TransitionGroup>
@@ -147,7 +138,7 @@ class Routes extends Component {
                 {filterRoutes(location).map(({ key, ...props }) => (
                   <Transition
                     key={`child-${key}`}
-                    timeout={0}
+                    timeout={500}
                     onEnter={handleEnterAnimation}
                     onExit={handleExitAnimation}
                   >

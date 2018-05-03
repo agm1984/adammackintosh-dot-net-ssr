@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { findDOMNode } from 'react-dom'
 
 class Tilt extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      style: {}
+      style: {},
     }
 
     const defaultSettings = {
@@ -17,7 +18,7 @@ class Tilt extends Component {
       speed: '1000',
       transition: true,
       axis: null,
-      reset: true
+      reset: true,
     }
 
     this.width = null
@@ -47,6 +48,46 @@ class Tilt extends Component {
     cancelAnimationFrame(this.updateCall)
   }
 
+  setTransition() {
+    clearTimeout(this.transitionTimeout)
+
+    this.setState(prevState => ({
+      style: {
+        ...prevState.style,
+        transition: `${this.settings.speed}ms ${this.settings.easing}`,
+      },
+    }))
+
+    this.transitionTimeout = setTimeout(() => {
+      this.setState(prevState => ({
+        style: {
+          ...prevState.style,
+          transition: '',
+        },
+      }))
+    }, this.settings.speed)
+  }
+
+  getValues(e) {
+    const x = (e.nativeEvent.clientX - this.left) / this.width
+    const y = (e.nativeEvent.clientY - this.top) / this.height
+    const _x = Math.min(Math.max(x, 0), 1)
+    const _y = Math.min(Math.max(y, 0), 1)
+
+    const tiltX = (this.reverse * ((this.settings.max / 2) - (_x * this.settings.max))).toFixed(2)
+    const tiltY = (this.reverse * ((_y * this.settings.max) - (this.settings.max / 2))).toFixed(2)
+
+    const percentageX = _x * 100
+    const percentageY = _y * 100
+
+    return {
+      tiltX,
+      tiltY,
+      percentageX,
+      percentageY,
+    }
+  }
+
   handleMouseEnter(cb = () => { }, e) {
     this.updateElementPosition()
     this.setTransition()
@@ -59,7 +100,7 @@ class Tilt extends Component {
         style: {
           ...prevState.style,
           transform: `perspective(${this.settings.perspective}px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`,
-        }
+        },
       }))
     })
   }
@@ -77,26 +118,6 @@ class Tilt extends Component {
     return cb(e)
   }
 
-  setTransition() {
-    clearTimeout(this.transitionTimeout)
-
-    this.setState(prevState => ({
-      style: {
-        ...prevState.style,
-        transition: `${this.settings.speed}ms ${this.settings.easing}`,
-      }
-    }))
-
-    this.transitionTimeout = setTimeout(() => {
-      this.setState(prevState => ({
-        style: {
-          ...prevState.style,
-          transition: '',
-        }
-      }))
-    }, this.settings.speed)
-  }
-
   handleMouseLeave(cb = () => { }, e) {
     this.setTransition()
 
@@ -105,26 +126,6 @@ class Tilt extends Component {
     }
 
     return cb(e)
-  }
-
-  getValues(e) {
-    const x = (e.nativeEvent.clientX - this.left) / this.width
-    const y = (e.nativeEvent.clientY - this.top) / this.height
-    const _x = Math.min(Math.max(x, 0), 1)
-    const _y = Math.min(Math.max(y, 0), 1)
-
-    const tiltX = (this.reverse * (this.settings.max / 2 - _x * this.settings.max)).toFixed(2)
-    const tiltY = (this.reverse * (_y * this.settings.max - this.settings.max / 2)).toFixed(2)
-
-    const percentageX = _x * 100
-    const percentageY = _y * 100
-
-    return {
-      tiltX,
-      tiltY,
-      percentageX,
-      percentageY,
-    }
   }
 
   updateElementPosition() {
@@ -151,7 +152,7 @@ class Tilt extends Component {
   render() {
     const style = {
       ...this.props.style,
-      ...this.state.style
+      ...this.state.style,
     }
 
     return (
@@ -166,6 +167,24 @@ class Tilt extends Component {
       </div>
     )
   }
+}
+
+Tilt.defaultProps = {
+  handleMouseEnter: undefined,
+  handleMouseMove: undefined,
+  handleMouseLeave: undefined,
+  style: undefined,
+  className: undefined,
+  children: undefined,
+}
+Tilt.propTypes = {
+  options: PropTypes.objectOf(PropTypes.any).isRequired,
+  handleMouseEnter: PropTypes.func,
+  handleMouseMove: PropTypes.func,
+  handleMouseLeave: PropTypes.func,
+  style: PropTypes.objectOf(PropTypes.any),
+  className: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Tilt

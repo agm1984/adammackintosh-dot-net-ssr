@@ -48,7 +48,7 @@ class ContactForm extends Component {
     const { isFormVerified } = this.props
     const { num1, num2, animate } = this.state
     const {
-      handleSubmit, /* onSubmit, */ pristine, submitting,
+      handleSubmit, pristine, submitting,
     } = this.props
     return (
       <form onSubmit={handleSubmit}>
@@ -163,7 +163,6 @@ ContactForm.propTypes = {
   handleVerificationFail: PropTypes.func.isRequired,
   isFormVerified: PropTypes.bool.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  // onSubmit: PropTypes.func.isRequired,
   pristine: PropTypes.bool.isRequired,
   submitting: PropTypes.bool.isRequired,
 }

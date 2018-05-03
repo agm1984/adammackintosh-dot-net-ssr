@@ -1,7 +1,7 @@
 import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from './notifications_types'
 
 const INITIAL_STATE = {
-  notifications: []
+  notifications: [],
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -9,7 +9,7 @@ export default (state = INITIAL_STATE, action) => {
     case ADD_NOTIFICATION:
       return {
         ...state,
-        notifications: [...state.notifications, action.notification]
+        notifications: [...state.notifications, action.notification],
       }
 
     case REMOVE_NOTIFICATION:
@@ -17,8 +17,8 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         notifications: [
           ...state.notifications.slice(0, action.index),
-          ...state.notifications.slice(action.index + 1)
-        ]
+          ...state.notifications.slice(action.index + 1),
+        ],
       }
 
     default:

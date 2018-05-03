@@ -108,7 +108,7 @@ class Contact extends Component {
   }
 }
 
-Contact.defaultProps = {
+Contact.propTypes = {
   mutate: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired,
 }

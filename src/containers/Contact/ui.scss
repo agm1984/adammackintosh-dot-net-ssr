@@ -1,4 +1,5 @@
 @import "../../variables.scss";
+
 // FORM                                          ROW LAYOUT
 // ########################################################
 .edit_rowcontainer {
@@ -81,8 +82,7 @@
   box-sizing: border-box;
   border-radius: 0;
   outline: 0;
-  width: 100%; // background: none;
-  // background: rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .error {

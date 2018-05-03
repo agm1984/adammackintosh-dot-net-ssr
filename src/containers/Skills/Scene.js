@@ -5,6 +5,7 @@ const OrbitControls = require('three-orbit-controls')(THREE)
 
 // TODO: A timer or the render loop is continuing after the Scene unmounts.
 // This note is to remove it.
+// console.logs are suppressed in prod, so priority is sub-maximal
 
 class Scene extends Component {
   constructor(props) {
@@ -56,7 +57,7 @@ class Scene extends Component {
 
     // ADAM MODEL
     this.adamLoader = new THREE.JSONLoader()
-    this.adamLoader.load('anime.json', (geometry, materials) => {
+    this.adamLoader.load('adam.json', (geometry, materials) => {
       materials.forEach((material) => {
         material.skinning = true // eslint-disable-line no-param-reassign
       })
@@ -99,7 +100,7 @@ class Scene extends Component {
     this.mount.appendChild(this.renderer.domElement)
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)
-    this.controls.center.set(0, 0, 0)
+    this.controls.target.set(0, 0, 0)
     this.controls.addEventListener('change', this.renderScene)
 
     window.scene = this.scene

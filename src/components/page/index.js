@@ -7,10 +7,10 @@ const defaultUrl =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
     : 'http://adammackintosh.net'
-const defaultTitle = 'SSR Website'
+const defaultTitle = 'Adam Mackintosh\'s Portfolio'
 const defaultDescription =
-  'Here is a pretty awesome meta tag description for my website.'
-const defaultImage = `${defaultUrl}/images/logo.jpg`
+  'Welcome to Adam Mackintosh\'s Portfolio'
+const defaultImage = `${defaultUrl}/adamLogo.png`
 const defaultTwitter = '@agm1984'
 const defaultSep = ' | '
 
@@ -119,7 +119,7 @@ Page.defaultProps = {
   children: undefined,
   style: undefined,
 }
-Page.defaultProps = {
+Page.propTypes = {
   id: PropTypes.string.isRequired,
   className: PropTypes.string,
   children: PropTypes.node,

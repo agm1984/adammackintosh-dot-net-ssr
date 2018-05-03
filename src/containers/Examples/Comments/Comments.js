@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+// Comments System is Non-MVP functionality
+// This will be added after the UI is more crystallized
+// and after more user feedback has been collected.
 class Comments extends Component {
   constructor(props) {
     super(props)

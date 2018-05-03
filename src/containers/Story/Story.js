@@ -6,7 +6,6 @@ import Page from '../../components/page'
 import adamLeft from './images/adam-left.png'
 import adamCenter from './images/adam-center.png'
 import adamRight from './images/adam-right.png'
-// import YouTube from './VideoPlayer'
 import './Story.css'
 
 class Story extends Component {
