@@ -1,5 +1,90 @@
-body {
+@font-face {
+  font-family: AROLY;
+  src: url(AROLY.ttf); }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  background: radial-gradient(#000, #101010); }
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  z-index: -9999; }
+
+body {
+  overflow-y: scroll;
+  min-height: 100vh; }
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff; }
+
+#router-wrapper {
+  width: calc(100% - 0.8rem); }
+
+#router {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
+#downScroller {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 3.2rem;
+  margin: 0 3.2rem 3.2rem 0;
+  color: #014420;
+  border: 0.1rem solid #014420;
+  background: none;
+  outline: #212121;
+  transition: all 250ms ease-in-out;
+  user-select: none;
+  z-index: 1; }
+
+#downScroller:hover {
+  color: green;
+  border: 0.2rem solid #014420;
+  transition: all 250ms ease-in-out;
+  cursor: pointer; }
+
+#downScroller:active {
+  color: #FF5043;
+  border: 0.2rem solid #FF5043; }
+
+#backToTopScroller {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 3.2rem;
+  margin: 0 3.2rem 3.2rem 0;
+  color: #45A29E;
+  border: 0.1rem solid #45A29E;
+  background: none;
+  outline: #212121;
+  transition: all 250ms ease-in-out;
+  user-select: none;
+  z-index: 9999; }
+
+#backToTopScroller:hover {
+  color: #45A29E;
+  border: 0.2rem solid #66FCF1;
+  transition: all 250ms ease-in-out;
+  cursor: pointer; }
+
+#backToTopScroller:active {
+  color: #FF5043;
+  border: 0.2rem solid #FF5043; }

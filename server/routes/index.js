@@ -1,10 +1,10 @@
 // Any route that comes in, send it to the universalLoader
 
-import express from 'express';
-import universalLoader from '../universal';
+import express from 'express'
+import universalLoader from '../universal'
 
-const router = express.Router();
+const router = express.Router()
 
-router.get('/', universalLoader);
+router.get('/', universalLoader)
 
-export default router;
+export default router

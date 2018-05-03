@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Asciify demo - file input</title>
+    <meta charset="utf-8">
+    <script src="/Asciify.js"></script>
+
+    <style>
+      output {
+        display: block;
+        font-family: "Monaco", "Menlo", "Inconsolata", "Courier New", monospace;
+        font-size: 10px;
+        line-height: 1;
+      }
+
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Asciify</h1>
+    <form id="form">
+      <label><span>Output width (chars): </span><input type="number" min="1" step="1" value="100" id="width_input"></label>
+      <label>
+        <span>Map: </span>
+        <select value="TEN" id="map_input">
+          <option value="TEN">@#%*+=-:. (10)</option>
+          <option value="FIVE">@=:. (5)</option>
+          <option value="FIVE_BLOCK">█▓▒░ (5)</option>
+          <option value="FOUR_BLOCK">█▓▒░(4)</option>
+          <option value="TWO">@ (2)</option>
+          <option value="TWO_BLOCK">█ (2)</option>
+        </select>
+      </label>
+      <input type="file" id="form_input">
+    </form>
+    <output id="output"></output>
+
+    <script src="demo.js"></script>
+  </body>
+</html>

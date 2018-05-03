@@ -1,0 +1,58 @@
+@import "../../variables.scss";
+
+#notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#notfound_heading {
+  color: $adam-primary-lightteal;
+  font-family: 'AROLY', sans-serif;
+  font-size: 12.8rem;
+  line-height: 12.8rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding: 0;
+}
+
+#notfound_subheading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  margin: 0 0 3.2rem 0;
+  padding: 0;
+}
+
+#notfound_button {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  color: $adam-primary-white;
+  border: 0.1rem solid $adam-primary-white;
+  padding: 1.6rem;
+  margin: 0 0.8rem 1.6rem 0.8rem;
+  transition: all 200ms ease-in-out;
+}
+
+#notfound_button:hover {
+  color: $adam-primary-lightblack;
+  background-color: $adam-primary-lightteal;
+  border: 0.1rem solid $adam-primary-lightteal;
+  transition: all 200ms ease-in-out;
+}
+
+#notfound_button:active {
+  background-color: $adam-primary-darkteal;
+  border: 0.1rem solid $adam-primary-darkteal;
+}

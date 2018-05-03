@@ -1,0 +1,68 @@
+@import "../../variables.scss";
+
+// ## SKILLS                                    MAIN LAYOUT
+// ########################################################
+#skills {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 6.4rem;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  //background-color: #000;
+}
+
+#skills_scene {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+#cluster_javascript {
+  display: flex;
+  transition: all 250ms ease-in-out;
+}
+
+.resumeButton {
+  position: absolute;
+  left: 3.2rem;
+  bottom: 0;
+}
+
+@media (max-width: 1400px) {
+  #skills {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 56rem;
+  }
+  #nav_left_user-container {
+    position: relative;
+    justify-content: center;
+    margin-left: -6.4rem;
+    width: 100%;
+  }
+  .statCluster-wrapper {
+    margin: 6.4rem 0 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #skills {
+    flex-direction: column;
+    align-items: center;
+  }
+  .statCluster {
+    width: 32.0rem;
+  }
+  .statBar_points-container {
+    width: 20.0rem;
+    height: 1.6rem;
+  }
+  .statBar_label {
+    margin-top: 1.6rem;
+  }
+}

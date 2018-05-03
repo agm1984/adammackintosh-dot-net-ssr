@@ -1,0 +1,505 @@
+@import "../../variables.scss";
+
+// ## STORY                                     MAIN LAYOUT
+// ########################################################
+#story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12.8rem;
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.timeline-title {
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  margin: 0;
+  margin-bottom: 3.2rem;
+}
+
+.timeline-title:after {
+  background-color: red !important;
+  border-bottom: 1px solid #618396;
+  display: block;
+  height: 1px;
+  margin: 0.625em auto 1.375em;
+  max-width: 80px;
+}
+
+.timeline-bonusPadding {
+  padding: 3.2rem 0 0 0;
+}
+
+// SCROLL DOWN BUTTON
+#story-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+// ## STORY                                        TIMELINE
+// ########################################################
+#timeline .timeline-item:after,
+#timeline .timeline-item:before {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+#timeline {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#timeline:before {
+  content: '';
+  position: absolute;
+  width: 0.2rem;
+  height: 100%;
+  background: $adam-primary-lightbrown;
+  left: 50%;
+  top: 0;
+}
+
+#timeline:after {
+  content: '';
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+#timeline .timeline-item {
+  position: relative;
+}
+
+#timeline .timeline-item .timeline-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.4rem;
+  height: 6.4rem;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: $adam-primary-white;
+  background: $adam-primary-darkgreen;
+  margin-left: -3.0rem;
+  border-radius: 50%;
+}
+
+#timeline .timeline-item .timeline-content {
+  width: 45%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background: none;
+  padding: 3.2rem;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 250ms ease;
+}
+
+#timeline .timeline-item .timeline-content h2 {
+  font-family: 'AROLY', sans-serif;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 1.6rem;
+  margin: -3.2rem -2.0rem 0 -1.6rem;
+  color: $adam-primary-lightgray;
+  background-color: $adam-transparent-darkgray;
+  border: 0.1rem solid green;
+  border-radius: 3px 3px 0 0;
+}
+
+#timeline .timeline-item .timeline-content:before {
+  content: '';
+  position: absolute;
+  left: calc(45% - 1.2rem);
+  top: 3.0rem;
+  width: 4.0rem;
+  height: 0;
+  border-bottom: 0.4rem solid $adam-primary-lightbrown;
+  z-index: -1;
+}
+
+#timeline .timeline-item .timeline-content.right {
+  float: right;
+}
+
+#timeline .timeline-item .timeline-content.right:before {
+  content: '';
+  right: calc(45% - 1.6rem);
+  left: inherit;
+  top: 3.0rem;
+  width: 3.6rem;
+  height: 0;
+  border-bottom: 0.4rem solid $adam-primary-lightbrown;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  color: $adam-primary-white;
+  outline: none;
+  background: none;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border: 0.1rem solid $adam-primary-white;
+  transition: all 250ms ease-in-out;
+}
+
+.btn:hover {
+  color: $adam-primary-lightteal;
+  border: 0.1rem solid $adam-primary-lightteal;
+  transition: all 250ms ease-in-out;
+}
+
+.btn:active {
+  color: $adam-primary-lightred;
+  border: 0.1rem solid $adam-primary-lightred;
+  transition: all 125ms ease-in-out;
+}
+
+@media (max-width: 768px) {
+  #timeline {
+    margin: 3.2rem;
+    padding: 0px;
+    width: 90%;
+  }
+  #timeline:before {
+    left: 0;
+  }
+  #timeline .timeline-item .timeline-content {
+    width: 90%;
+    float: right;
+  }
+  #timeline .timeline-item .timeline-content:before,
+  #timeline .timeline-item .timeline-content.right:before {
+    left: -1.6rem;
+    margin-left: 4.0rem;
+    width: 6.0rem;
+    border-left: 0;
+  }
+  #timeline .timeline-item .timeline-icon {
+    left: 0;
+  }
+}
+
+@media (max-width: 668px) {
+  #timeline .timeline-item .timeline-content:before,
+  #timeline .timeline-item .timeline-content.right:before {
+    margin-left: 3.2rem;
+  }
+}
+
+@media (max-width: 568px) {
+  #timeline .timeline-item .timeline-content:before,
+  #timeline .timeline-item .timeline-content.right:before {
+    margin-left: 2.2rem;
+  }
+}
+
+@media (max-width: 468px) {
+  #timeline .timeline-item .timeline-content:before,
+  #timeline .timeline-item .timeline-content.right:before {
+    margin-left: 1.6rem;
+  }
+}
+
+@media (max-width: 368px) {
+  #timeline .timeline-item .timeline-content:before,
+  #timeline .timeline-item .timeline-content.right:before {
+    margin-left: 0.4rem;
+  }
+}
+
+// ## STORY                                          A TEAM
+// ########################################################
+.story_paragraph {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+#team-intro {
+  max-width: 80.0rem;
+  height: 80rem;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+#team-container-wrapper {
+  width: 140.0rem;
+
+}
+#team-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding-top: 3.2rem;
+}
+
+.team_person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.333%;
+}
+
+.team_person-avatar {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 9.6rem;
+  height: 9.6rem;
+  border: 0.1rem solid $adam-primary-darkblack;
+  border-radius: 50%;
+  box-shadow: -8px 14px 40px 0px rgba(0, 0, 0, 1);
+  margin-bottom: 3.2rem;
+  opacity: 0.9;
+}
+
+.team_person-title {
+  font-family: 'AROLY', sans-serif;
+  font-size: 2.0rem;
+  line-height: 2.0rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: $adam-primary-lightred;
+  margin: 0;
+}
+
+.team_person-blurb {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-top: 0.8rem;
+  margin-bottom: 6.4rem;
+  padding: 0 3.2rem 0 3.2rem;
+}
+
+// ## STORY                                    A BRIEF WORD
+// ########################################################
+
+#info-wrapper {
+  display: block;
+  width: calc(100vw - 1.0rem);
+  padding: 0 3.2rem 3.2rem 3.2rem;
+  overflow: none;
+}
+
+#info-container {
+  display: flex;
+}
+
+#info_split-container {
+  display: flex;
+  background-color: $adam-primary-darkerteal;
+  box-shadow: -8px 14px 40px 0px black;
+  padding-bottom: 1.6rem;
+}
+
+.info_split {
+  width: 50%;
+  padding: 0 3.2rem 0 3.2rem;
+}
+
+.info_split-title {
+  text-align: center;
+  font-family: 'AROLY', sans-serif;
+  font-size: 2.0rem;
+  line-height: 2.0rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: $adam-primary-white;
+  background-color: $adam-transparent-darkgray;
+  border: 0.1rem solid green;
+  margin: 3.2rem 0 0 0;
+  padding: 1.6rem;
+}
+
+.info_split-column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.6rem;
+}
+
+.info_split-heading {
+  font-family: 'AROLY', sans-serif;
+  font-size: 2.0rem;
+  line-height: 2.8rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: $adam-primary-darkteal;
+  margin: 0;
+  padding: 0;
+}
+
+.info_split-content {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin: 0;
+}
+
+#programmers-container {
+  padding: 0 0 0 0.4rem;
+}
+
+// ## STORY                                CHOOSE YOUR PATH
+// ########################################################
+#path-wrapper {
+  position: relative;
+  display: block;
+  width: calc(100vw - 1rem);
+}
+
+/*
+  1.9rem is needed to maintain horizontal alignment
+  with adjacent elements.
+*/
+#path-container {
+  display: flex;
+  justify-content: center;
+  padding: 3.2rem 1.9rem 3.2rem 0;
+}
+
+.path-divider {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+// FOOTER
+#story-footer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  padding: 3.2rem 0 3.2rem 0;
+  user-select: none;
+  z-index: 9999;
+}
+
+#story-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 19.2rem;
+  padding-left: 3.2rem;
+  z-index: 9999;
+}
+
+#story-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#story-conclusion {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.2em;
+  color: $adam-primary-lightbrown;
+}
+
+#story-right {
+  width: 19.2rem;
+  height: 100%;
+}
+
+@media (max-width: 1400px) {
+  // A TEAM
+  #team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team_person {
+    width: 100%;
+    max-width: 450px;
+  }
+  .btn {
+    margin-bottom: 6.4rem;
+  }
+  // A BRIEF WORD
+  #info_split-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  #story {
+    padding-top: 22.4rem;
+  }
+  // A BRIEF WORD
+  #info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info_split {
+    width: 100%;
+  }
+  #info_split-container {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #story {
+    padding-top: 25.6rem;
+  }
+  .team_person {
+    padding: 0 3.2rem 0 3.2rem;
+  }
+  #info-wrapper {
+    padding: 0;
+  }
+  #story-conclusion {
+    display: none;
+  }
+}

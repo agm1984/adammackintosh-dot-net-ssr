@@ -1,0 +1,84 @@
+@import "../../variables.scss";
+
+// ## MODAL                                     MAIN LAYOUT
+// ########################################################
+.modal_backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 1);
+  transition: all 500ms ease-in-out;
+  z-index: 9999;
+  animation: fadein 500ms;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ACCENT LINE
+#modal_line {
+  position: absolute;
+  display: inline-block;
+  top: 20%;
+  left: calc(10% - 3.2rem);
+  width: 6.4rem;
+  height: 0.4rem;
+  background-color: $adam-primary-white;
+  z-index: -1;
+}
+
+.modal_window {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+
+// CLOSE BUTTON
+.modal_closeButton {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  background: none;
+  border: none;
+  padding: 1.6rem;
+}
+
+.modal_closeButton > svg {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.modal_closeButton-icon {
+  position: relative;
+  stroke: $adam-primary-lightgray;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 5;
+  z-index: -1;
+}
+
+.modal_closeButton-icon:hover {
+  stroke: $adam-primary-lightred;
+}
+
+// PHOTO
+.modal_image {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+}

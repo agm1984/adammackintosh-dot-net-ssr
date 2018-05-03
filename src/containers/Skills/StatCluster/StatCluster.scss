@@ -1,0 +1,83 @@
+@import "../../../variables.scss";
+
+// ## STATS                                         CLUSTER
+// ########################################################
+.statCluster-wrapper {
+  position: relative;
+  margin: 6.4rem 3.2rem 6.4rem 6.4rem;
+}
+.statCluster {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  top: 0;
+  width: 48.0rem;
+  height: 100%;
+}
+
+.statCluster-line {
+  position: absolute;
+  top: 2.9rem;
+  left: -3.2rem;
+  width: 6.4rem;
+  height: 0.4rem;
+  border-bottom: 0.4rem solid $adam-primary-white;
+  z-index: 9999;
+}
+
+// ## STATS                                     SINGLE STAT
+// ########################################################
+.statHeading {
+  height: 6.4rem;
+  font-family: 'AROLY', sans-serif;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: $adam-primary-lightgray;
+  background-color: $adam-primary-darkgray;
+  border: 0.1rem solid green;
+  margin: 0;
+  padding: 2.0rem;
+}
+
+// ## STATS                                     SINGLE STAT
+// ########################################################
+.statBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.statBar_label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  flex: 1;
+}
+
+// 32.36 = (10 * 3.2rem) + (9 * 0.8rem)
+.statBar_points-container {
+  position: relative;
+  display: flex;
+  width: 32.36rem;
+  background-color: $adam-primary-darkblack;
+  border: 0.4rem solid $adam-primary-darkblack;
+}
+
+.statBar_points {
+  height: 2.4rem;
+  background-color: $adam-primary-darkteal;
+}
+
+// See StatBar component for another reference to width: 0.8rem
+.statBar_points-divider {
+  position: absolute;
+  width: 0.8rem;
+  height: 2.4rem;
+  background-color: $adam-primary-darkblack;
+}

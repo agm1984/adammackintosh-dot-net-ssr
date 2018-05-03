@@ -1,0 +1,130 @@
+@import "../../variables.scss";
+
+// FORM                                          ROW LAYOUT
+// ########################################################
+.edit_rowcontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.edit_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 6.4rem;
+  margin-top: 0.4rem;
+}
+
+.edit_row-item {
+  width: 100%;
+}
+
+// FORM                                          TEXT INPUT
+// ########################################################
+.contact_input {
+  padding: 1.6rem;
+  width: 100%;
+  height: 100%;
+  border: 0.2rem solid $adam-primary-white;
+  margin-bottom: 6.4rem;
+  box-sizing: border-box;
+}
+
+.subjectLine {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.contact_input:focus {
+  border: 0.2rem solid $adam-primary-lightteal !important;
+  z-index: 9999;
+}
+
+// FORM                                           TEXT AREA
+// ########################################################
+.contact_textArea {
+  display: flex;
+  width: 100%;
+  height: 6.4rem;
+  border: 0.2rem solid $adam-primary-white;
+  border-top: 0;
+}
+
+.contact_textArea::placeholder {
+  border-top: 0 !important;
+}
+
+// FORM                                               STATE
+// ########################################################
+.edit_empty {
+  height: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.809);
+  transition: all 250ms ease-in-out;
+}
+.edit_empty::placeholder {
+  color: $adam-primary-lightblack;
+}
+
+.edit_filled {
+  height: 6.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: $adam-primary-white !important;
+  border: 0.2rem solid $adam-primary-white;
+  transition: all 250ms ease-in-out;
+}
+
+.normal {
+  outline: 0;
+  width: 100%;
+}
+
+.error {
+  height: 6.4rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  color: $adam-primary-errordark;
+  background-color: $adam-primary-errorlight;
+  border: 0.2rem solid $adam-primary-errordark !important;
+  z-index: 9999;
+  outline: 0;
+}
+
+.error::placeholder {
+  color: $adam-primary-errordark;
+  font-weight: 400;
+}
+
+.edit_required {
+  position: absolute;
+  bottom: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: $adam-primary-white;
+  margin-bottom: 4.0rem;
+  margin-left: 0.8rem;
+  white-space: nowrap;
+}
+
+
