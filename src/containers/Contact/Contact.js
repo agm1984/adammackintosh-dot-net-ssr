@@ -47,8 +47,8 @@ class Contact extends Component {
       <Page
         id="contact"
         className=""
-        title="Examples"
-        description="See some of Adam's examples"
+        title="Contact"
+        description="Start a conversation with Adam"
       >
         <div id="contact_form-wrapper">
           <div id="contact_form">

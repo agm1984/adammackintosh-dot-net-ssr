@@ -17,11 +17,13 @@ class Skills extends Component {
       <Page
         id="skills"
         className=""
-        title="Adam Mackintosh Skills"
-        description="skills page will have a custom set description"
+        title="Skills"
+        description="See some of Adam's skills"
       >
-        <Scene />
         <UserDetails />
+        <Scene />
+        <div id="skills-leftScrollZone" />
+        <div id="skills-rightScrollZone" />
         <StatCluster
           id="cluster_javascript"
           category="skill ratios"
@@ -44,11 +46,13 @@ class Skills extends Component {
           <StatBar label="THREE.JS" points={30} />
           <StatBar label="BLENDER" points={25} />
         </StatCluster>
-        <button
+        <a
           className="btn resumeButton"
+          href="/adamMackintoshResumeApr2018.docx"
+          download
         >
           DOWNLOAD RESUME
-        </button>
+        </a>
       </Page>
     )
   }

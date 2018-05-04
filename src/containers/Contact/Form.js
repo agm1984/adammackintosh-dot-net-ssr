@@ -91,32 +91,38 @@ class ContactForm extends Component {
             </div>
           </div>
           <div className="contact_form-splitter">
-            <div className="contact_form_verification-question">
-              {`${num1} + ${num2} =`}
+            <div id="contactForm_finalRow">
+              <div id="contactForm_finalRow-left">
+                <div className="contact_form_verification-question">
+                  {`${num1} + ${num2} =`}
+                </div>
+                <div className="contact_input-divider" />
+                <div className="contact_form_verification-solution">
+                  <Field
+                    ref={(node) => { this.verificationInput = node }}
+                    component={Verification}
+                    type="text"
+                    name="message_verification"
+                    placeholder=""
+                    solution={num1 + num2}
+                    onInputChange={this.handleVerification}
+                  />
+                </div>
+                <div className="contact_input-divider lastDivider" />
+              </div>
+              <div id="contactForm_finalRow-right">
+                <button
+                  className={(isFormVerified)
+                    ? 'contact_submit-ready'
+                    : 'contact_submit-default'}
+                  disabled={pristine || submitting}
+                  type="submit"
+                  href="#contact_message"
+                >
+                  SEND
+                </button>
+              </div>
             </div>
-            <div className="contact_input-divider" />
-            <div className="contact_form_verification-solution">
-              <Field
-                ref={(node) => { this.verificationInput = node }}
-                component={Verification}
-                type="text"
-                name="message_verification"
-                placeholder=""
-                solution={num1 + num2}
-                onInputChange={this.handleVerification}
-              />
-            </div>
-            <div className="contact_input-divider" />
-            <button
-              className={(isFormVerified)
-                ? 'contact_submit-ready'
-                : 'contact_submit-default'}
-              disabled={pristine || submitting}
-              type="submit"
-              href="#contact_message"
-            >
-              SEND
-            </button>
           </div>
         </div>
       </form>

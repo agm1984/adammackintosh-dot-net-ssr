@@ -42,9 +42,7 @@
 
 #timeline {
   width: 100%;
-  margin: 30px auto;
   position: relative;
-  padding: 0 10px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -145,6 +143,7 @@
   font-weight: 200;
   letter-spacing: 0.2em;
   text-decoration: none;
+  text-align: center;
   color: #fff;
   outline: none;
   background: none;
@@ -269,7 +268,7 @@
 
 #info-wrapper {
   display: block;
-  width: calc(100vw - 1.0rem);
+  width: calc(100vw - 3.2rem);
   padding: 0 3.2rem 3.2rem 3.2rem;
   overflow: none; }
 
@@ -284,7 +283,11 @@
 
 .info_split {
   width: 50%;
-  padding: 0 3.2rem 0 3.2rem; }
+  padding: 0; }
+
+#info_split-divider {
+  width: 6.4rem;
+  height: 1.6rem; }
 
 .info_split-title {
   text-align: center;
@@ -329,7 +332,7 @@
 #path-wrapper {
   position: relative;
   display: block;
-  width: calc(100vw - 1rem); }
+  width: calc(100vw - 3.2rem); }
 
 /*
   1.9rem is needed to maintain horizontal alignment
@@ -380,6 +383,8 @@
   height: 100%; }
 
 @media (max-width: 1400px) {
+  #team-container-wrapper {
+    width: 100%; }
   #team-container {
     flex-direction: column;
     align-items: center; }
@@ -393,14 +398,22 @@
 
 @media (max-width: 1024px) {
   #story {
-    padding-top: 22.4rem; }
+    padding-top: 22.4rem;
+    align-items: initial; }
+  .timeline-title {
+    text-align: center; }
   #info-container {
     flex-direction: column;
     align-items: center; }
   .info_split {
-    width: 100%; }
+    width: 100%;
+    padding: 0 1.6rem 0 1.6rem; }
   #info_split-container {
-    margin-bottom: 1.6rem; } }
+    margin-bottom: 1.6rem; }
+  #path-container {
+    padding: 3.2rem 0 3.2rem 0; }
+  .story_paragraph {
+    text-align: center; } }
 
 @media (max-width: 600px) {
   #story {

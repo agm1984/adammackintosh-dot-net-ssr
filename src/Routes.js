@@ -72,6 +72,12 @@ const routes = [
 const filterRoutes = location => routes.filter(({ path, strict, exact }) =>
   !!matchPath(location.pathname, { path, strict, exact }))
 
+/**
+ * The Pseudo Element is a passthrough element
+ * that does not generate DOM markup.
+ */
+const Pseudo = ({ children }) => children
+
 class Routes extends Component {
   constructor(props) {
     super(props)
@@ -81,7 +87,7 @@ class Routes extends Component {
   render() {
     // Generate a Menu Link if showInMenu === true
     return (
-      <div id="router-wrapper">
+      <Pseudo>
         <SacredGeometry
           circleColor="#014420"
           dotColor="#1F2833"
@@ -153,7 +159,7 @@ class Routes extends Component {
             )
           }}
         />
-      </div>
+      </Pseudo>
     )
   }
 }

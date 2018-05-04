@@ -28,13 +28,10 @@ body {
   height: 100%;
   color: #fff; }
 
-#router-wrapper {
-  width: calc(100% - 0.8rem); }
-
 #router {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   z-index: 0; }
 
 #downScroller {
@@ -88,3 +85,11 @@ body {
 #backToTopScroller:active {
   color: #FF5043;
   border: 0.2rem solid #FF5043; }
+
+@media (max-width: 1024px) {
+  #router-wrapper {
+    width: initial; }
+  #downScroller {
+    display: none; }
+  #backToTopScroller {
+    display: none; } }

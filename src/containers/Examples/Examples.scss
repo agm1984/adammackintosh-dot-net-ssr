@@ -188,7 +188,6 @@
   z-index: -1;
 }
 
-// EXAMPLE ACCENT LINE
 #example_line {
   position: absolute;
   display: inline-block;
@@ -375,6 +374,7 @@
   color: $adam-primary-darkblack;
   margin: 0 0 0.4rem 0;
   padding-left: 6.4rem;
+  white-space: nowrap;
 }
 
 .example_technologies li:before {
@@ -527,6 +527,9 @@
 }
 
 @media (max-width: 1337px) {
+  #example-wrapper {
+    padding: 12.8rem;
+  }
   #example_header {
     flex-direction: column;
     align-items: center;
@@ -608,6 +611,9 @@
 }
 
 @media (max-width: 500px) {
+  .examples_grid_feature-button {
+    margin: 1.6rem 0 1.6rem 0;
+  }
   #example-wrapper {
     padding: 28.8rem 1.6rem 1.6rem 1.6rem;
   }
@@ -630,5 +636,8 @@
   }
   .example_content-paragraph {
     padding: 0 3.2rem 0 3.2rem;
+  }
+  #example_images {
+    padding: 0;
   }
 }

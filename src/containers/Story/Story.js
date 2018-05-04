@@ -52,8 +52,8 @@ class Story extends Component {
         <Page
           id="story"
           className=""
-          title="Adam Mackintosh Story"
-          description="Story page will have a custom set description"
+          title="Story"
+          description="An approximate history and story about Adam Mackintosh"
         >
           <h1 className="timeline-title">A MACKINTOSH TREE</h1>
           <div id="timeline">
@@ -191,39 +191,39 @@ class Story extends Component {
                   </div>
                 </div>
               </div>
+              <div id="info_split-divider" />
               <div className="info_split">
                 <h3 className="info_split-title">to programmers</h3>
                 <div id="programmers-container">
                   <p className="story_paragraph">
-                    I like JavaScript (JS) because it is a language made of atomic logical blocks
-                    that I would call function-by-reference objects.
-                    A function is a place to do work, like in Mathematics.
-                    This is fundamentally why I am passionate about deterministic transformations.
-                    JS can be perfectly-efficient because a person can compose
-                    functions together with absolutely-minimized time and complexity
-                    as long as this person adheres to some rules and best-practices
-                    that include protective layers.
+                    I like JavaScript (JS) because it is a language made of atomic building blocks.
+                    A Function is a place to do work, like in Mathematics.
+                    This is fundamentally why I am passionate about deterministic transformations;
+                    they create predictable movement from point A to B like a math formula.
+                    Immutable Functional Programming allows a person to compose
+                    Functions together with minimized time and complexity
+                    provided the person follows some strict rules.
                   </p>
                   <p className="story_paragraph">
-                    With JS, the imperative-nature of Functional Programming
-                    matches up well with the declarative-nature of both Objects and event streams;
+                    The declarative-nature of Functional Programming
+                    matches up well with Objects, event streams, and state;
                     immutability is important because shared state and side
                     effects are very dangerous. Understanding the event loop and garbage
                     collection helps a lot. Aiming for referential transparency helps even more.
                   </p>
                   <p className="story_paragraph">
-                    Some consider JS to be loose, and they are correct,
-                    but dynamic-typing allows one to rapidly spool out logic
+                    Some consider JS loose, and they are correct,
+                    but dynamic typing allows one to rapidly spool out logic
                     in any desired direction.
                     JS is a language of great productivity towards both APIs and apps.
                     It is an isomorphic dominator. Reach out to me on Twitter if you want
-                    to pick up the conversation. I'd love to hear your thoughts or provide additional context.
+                    to pick up the conversation.
+                    I'd love to hear your thoughts or provide additional context.
                   </p>
                   <p className="story_paragraph">
                     I would need more time to explain, but JS is great at managing streams
                     of concurrent, potentially-unrelated actions and events
                     while maximizing what I would call lossless IOPs (Input/Outputs per second).
-
                     JS has everything I need to quickly create scalable,
                     performant applications.
                   </p>

@@ -27,6 +27,7 @@
 #contact_left {
   position: relative;
   width: 50%;
+  min-height: 48.0rem;
   background: #383838;
   border: 0.2rem solid $adam-primary-white;
   padding: 3.2rem;
@@ -227,6 +228,23 @@
   transition: all 250ms ease-in-out;
 }
 
+#contactForm_finalRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#contactForm_finalRow-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+#contactForm_finalRow-right {
+  flex: 0;
+}
+
 // SUBMIT BUTTON
 .contact_submit-default {
   height: 6.4rem;
@@ -289,11 +307,13 @@
   }
   #contact_left {
     width: 64.0rem;
+    height: 100%;
     margin: 0 0 6.4rem 0;
     padding-bottom: 6.4rem;
   }
   #contact_right {
     width: 64.0rem;
+    height: 100%;
     padding: 0;
   }
 }
@@ -317,5 +337,23 @@
   }
   #contact_right {
     width: 32.0rem;
+  }
+  #contactForm_finalRow {
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 6.4rem;
+  }
+  #contactForm_finalRow-left {
+    display: flex;
+    justify-content: center;
+    height: 6.4rem;
+    margin-bottom: 6.4rem;
+  }
+  .lastDivider {
+    display: none;
+  }
+  #contactForm_finalRow-right {
+    display: flex;
+    justify-content: center;
   }
 }

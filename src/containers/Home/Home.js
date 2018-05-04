@@ -24,8 +24,8 @@ class Home extends Component {
       <Page
         id="home"
         className=""
-        title="Adam Mackintosh's Portfolio"
-        description="examples page will have a custom set description"
+        title="Home"
+        description="Welcome to Adam Mackintosh's Portfolio"
       >
         <div id="home_cover">
           <div id="home_avatar" style={{ backgroundImage: `url(${adam})` }} />

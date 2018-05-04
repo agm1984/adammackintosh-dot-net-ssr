@@ -55,9 +55,8 @@
 
 #timeline {
   width: 100%;
-  margin: 30px auto;
+  //margin: 3.2rem auto;
   position: relative;
-  padding: 0 10px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -168,6 +167,7 @@
   font-weight: 200;
   letter-spacing: 0.2em;
   text-decoration: none;
+  text-align: center;
   color: $adam-primary-white;
   outline: none;
   background: none;
@@ -265,8 +265,8 @@
 
 #team-container-wrapper {
   width: 140.0rem;
-
 }
+
 #team-container {
   display: flex;
   flex-direction: row;
@@ -322,7 +322,7 @@
 
 #info-wrapper {
   display: block;
-  width: calc(100vw - 1.0rem);
+  width: calc(100vw - 3.2rem);
   padding: 0 3.2rem 3.2rem 3.2rem;
   overflow: none;
 }
@@ -340,7 +340,12 @@
 
 .info_split {
   width: 50%;
-  padding: 0 3.2rem 0 3.2rem;
+  padding: 0;
+}
+
+#info_split-divider {
+  width: 6.4rem;
+  height: 1.6rem;
 }
 
 .info_split-title {
@@ -393,7 +398,7 @@
 #path-wrapper {
   position: relative;
   display: block;
-  width: calc(100vw - 1rem);
+  width: calc(100vw - 3.2rem);
 }
 
 /*
@@ -454,6 +459,9 @@
 
 @media (max-width: 1400px) {
   // A TEAM
+  #team-container-wrapper {
+    width: 100%;
+  }
   #team-container {
     flex-direction: column;
     align-items: center;
@@ -474,6 +482,10 @@
 @media (max-width: 1024px) {
   #story {
     padding-top: 22.4rem;
+    align-items: initial;
+  }
+  .timeline-title {
+    text-align: center;
   }
   // A BRIEF WORD
   #info-container {
@@ -482,9 +494,16 @@
   }
   .info_split {
     width: 100%;
+    padding: 0 1.6rem 0 1.6rem;
   }
   #info_split-container {
     margin-bottom: 1.6rem;
+  }
+  #path-container {
+    padding: 3.2rem 0 3.2rem 0;
+  }
+  .story_paragraph {
+    text-align: center;
   }
 }
 

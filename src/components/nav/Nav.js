@@ -56,28 +56,24 @@ class Nav extends Component {
     const activeStyle = { color: '#66FCF1' }
     return (
       <div className={(isScrolling) ? 'Nav isScrolling' : 'Nav'}>
-        <div id="Nav_brand">
-          <NavLink
-            to="/"
-            className="Nav_brand-logo"
-            activeClassName={(isScrolling)
-              ? 'activeRoute isScrolling'
-              : 'activeRoute'}
-            activeStyle={activeStyle}
-            title="View Home"
-            exact
-          >
-            {(pathname !== '/skills') && (
+        {(pathname !== '/skills') && (
+          <div id="Nav_brand">
+            <NavLink
+              to="/"
+              className="Nav_brand-logo"
+              activeClassName={(isScrolling)
+                ? 'activeRoute isScrolling'
+                : 'activeRoute'}
+              activeStyle={activeStyle}
+              title="View Home"
+              exact
+            >
               <div className="nav_adamLogo" />
-            )}
-            {(pathname !== '/skills') && (
               <span id="Nav_brand-adam">ADAM</span>
-            )}
-            {(pathname !== '/skills') && (
               <span id="Nav_brand-mackintosh">MACKINTOSH</span>
-            )}
-          </NavLink>
-        </div>
+            </NavLink>
+          </div>
+        )}
         <div id="Nav_pages">
           {this.props.children}
         </div>
