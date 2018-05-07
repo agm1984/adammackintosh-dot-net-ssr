@@ -50,11 +50,13 @@
 // CLOSE BUTTON
 .modal_closeButton {
   position: absolute;
-  right: 5%;
-  top: 5%;
+  top: 10%;
+  right: 10%;
   background: none;
   border: none;
   padding: 1.6rem;
+  background-color: $adam-transparent-darkgray;
+  border: 0.1rem solid green;
 }
 
 .modal_closeButton > svg {

@@ -125,7 +125,7 @@
   border: 0.2rem solid $adam-primary-lightteal;
 }
 
-.examples_grid_feature-overlay:hover {
+.examples_grid_feature-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -137,12 +137,42 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
   font-size: 1.6rem;
   line-height: 2.2rem;
   letter-spacing: 0.2em;
   color: $adam-primary-white;
+  background-color: $adam-transparent-darkgray;
+  border: 0.1rem solid green;
+  padding: 1.6rem;
+}
+
+.examples_grid_feature-unseen {
+  display: none;
+}
+
+.examples_grid_feature-seen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.examples_grid_feature-seen span {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.8rem;
+  line-height: 1.6rem;
+  color: green;
   background-color: $adam-transparent-darkgray;
   border: 0.1rem solid green;
   padding: 1.6rem;
@@ -387,6 +417,7 @@
 #example_images {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   padding: 0 4.8rem 0 4.8rem;
@@ -418,20 +449,49 @@
   width: 100%;
   height: 100%;
 }
-.example_image-overlay:hover {
-  background: none;
-}
 
 .example_image-caption {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
   font-size: 1.6rem;
   line-height: 2.2rem;
   letter-spacing: 0.2em;
   color: $adam-primary-white;
+  background-color: $adam-transparent-darkgray;
+  border: 0.1rem solid green;
+  padding: 1.6rem;
+}
+
+.example_image-unseen {
+  display: none;
+}
+
+.example_image-seen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.example_image-seen span {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.8rem;
+  line-height: 1.6rem;
+  color: green;
   background-color: $adam-transparent-darkgray;
   border: 0.1rem solid green;
   padding: 1.6rem;

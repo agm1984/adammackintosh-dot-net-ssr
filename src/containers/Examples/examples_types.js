@@ -1,0 +1,2 @@
+export const MARK_EXAMPLE_SEEN = 'MARK_EXAMPLE_SEEN'
+export const MARK_IMAGE_SEEN = 'MARK_IMAGE_SEEN'

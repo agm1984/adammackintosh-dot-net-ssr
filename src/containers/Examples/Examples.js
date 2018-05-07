@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
 import Page from '../../components/page'
 import Tilt from './Tilt'
 import Example from './Example'
-import examples from './examples.config'
 import { handleDisableDownScrollerButton } from '../../components/nav/nav_actions'
+import { markExampleSeen } from './examples_actions'
 import './Examples.css'
 
 /**
@@ -28,7 +28,6 @@ class Examples extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      examples,
       activeCategory: 'viewAll',
     }
   }
@@ -84,6 +83,8 @@ class Examples extends Component {
       ...new Set(categoriesWithDuplicates.map(f => f.category_id)),
     ])
 
+    const { examples } = this.props
+
     return (
       <div id="examples_categories">
         <NavLink
@@ -112,6 +113,8 @@ class Examples extends Component {
   }
 
   renderMatches = (activeCategory) => {
+    const { examples } = this.props
+
     // VIEW ALL
     if (!activeCategory) {
       return (
@@ -120,6 +123,7 @@ class Examples extends Component {
             <NavLink
               to={`/examples/${f.category_id}/${f.feature_id}`}
               className="examples_grid_feature-button"
+              onClick={() => this.props.markExampleSeen(f.feature_id)}
               key={f.feature_id}
             >
               <Tilt options={{ reverse: true, max: 15 }}>
@@ -131,6 +135,13 @@ class Examples extends Component {
                     <span className="examples_grid_feature-caption">
                       {f.feature_id.toUpperCase()}
                     </span>
+                    <div
+                      className={(f.feature_seen === true)
+                        ? 'examples_grid_feature-seen'
+                        : 'examples_grid_feature-unseen'}
+                    >
+                      <span>✓</span>
+                    </div>
                   </div>
                 </div>
               </Tilt>
@@ -149,6 +160,7 @@ class Examples extends Component {
             <NavLink
               to={`/examples/${f.category_id}/${f.feature_id}`}
               className="examples_grid_feature-button"
+              onClick={() => this.props.markExampleSeen(f.feature_id)}
               key={f.feature_id}
             >
               <Tilt options={{ reverse: true, max: 15 }}>
@@ -160,6 +172,13 @@ class Examples extends Component {
                     <span className="examples_grid_feature-caption">
                       {f.feature_id.toUpperCase()}
                     </span>
+                    <div
+                      className={(f.feature_seen === true)
+                        ? 'examples_grid_feature-seen'
+                        : 'examples_grid_feature-unseen'}
+                    >
+                      <span>✓</span>
+                    </div>
                   </div>
                 </div>
               </Tilt>
@@ -173,8 +192,8 @@ class Examples extends Component {
     const [
       , , category, project,
     ] = this.props.routing.location.pathname.split('/')
-    const { currentScrollYPosition } = this.props
-    const { examples, activeCategory } = this.state
+    const { currentScrollYPosition, examples } = this.props
+    const { activeCategory } = this.state
 
     if (!project) {
       return (
@@ -216,6 +235,7 @@ class Examples extends Component {
       )
     }
 
+    // IF URL CONTAINS A PROJECT, SHOW IT
     return (
       <Example
         activeCategory={activeCategory}
@@ -232,12 +252,17 @@ Examples.propTypes = {
   currentScrollYPosition: PropTypes.number.isRequired,
   currentPageHasScroll: PropTypes.bool.isRequired,
   handleDisableDownScrollerButton: PropTypes.func.isRequired,
+  examples: PropTypes.arrayOf(PropTypes.any).isRequired,
+  markExampleSeen: PropTypes.func.isRequired,
 }
 
-const mapStateToProps = ({ routing, nav }) => ({
+const mapStateToProps = ({ routing, nav, examples }) => ({
   routing,
   currentScrollYPosition: nav.currentScrollYPosition,
   currentPageHasScroll: nav.currentPageHasScroll,
+  examples: examples.examples,
 })
 
-export default connect(mapStateToProps, { handleDisableDownScrollerButton })(Examples)
+export default connect(mapStateToProps, {
+  handleDisableDownScrollerButton, markExampleSeen,
+})(Examples)

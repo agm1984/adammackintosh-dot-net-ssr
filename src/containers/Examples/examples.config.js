@@ -47,7 +47,7 @@ import campsiteComments from './images/devBootcamp/campsite-comments.gif'
 import rgbGame from './images/devBootcamp/rgb-game.gif'
 import movieSearch from './images/devBootcamp/movie-search.gif'
 
-export default [
+export default [ /* eslint-disable object-curly-newline */
   {
     // PROJECTS
     category_id: 'projects',
@@ -61,18 +61,19 @@ export default [
       secondary: ['CREATE-REACT-APP', 'NODE.JS', 'GRAPHQL', 'NEO4J', 'MONGO DB'],
     },
     feature_images: [
-      { image_id: 0, image_src: cmsSignIn, image_caption: 'JWT AUTHENTICATION' },
-      { image_id: 1, image_src: cmsSignUp, image_caption: 'MULTI-STAGE SIGNUP' },
-      { image_id: 2, image_src: cmsSearchFilter, image_caption: 'MULTI-FIELD SEARCH' },
-      { image_id: 3, image_src: cmsPagination, image_caption: 'PAGINATION CONTROLS' },
-      { image_id: 4, image_src: cmsPeople, image_caption: 'USER MANAGEMENT' },
-      { image_id: 5, image_src: cmsArticles, image_caption: 'BLOG SYSTEM' },
-      { image_id: 6, image_src: cmsRelatedData, image_caption: 'RELATED DATA' },
-      { image_id: 7, image_src: cmsPolyglot, image_caption: 'NEO4J & MONGO DB' },
-      { image_id: 8, image_src: cmsGraphQL, image_caption: 'GRAPHQL' },
-      { image_id: 9, image_src: cmsDashboards, image_caption: 'SERVER METRICS' },
+      { image_id: 0, image_src: cmsSignIn, image_caption: 'JWT AUTHENTICATION', image_seen: false },
+      { image_id: 1, image_src: cmsSignUp, image_caption: 'MULTI-STAGE SIGNUP', image_seen: false },
+      { image_id: 2, image_src: cmsSearchFilter, image_caption: 'MULTI-FIELD SEARCH', image_seen: false },
+      { image_id: 3, image_src: cmsPagination, image_caption: 'PAGINATION CONTROLS', image_seen: false },
+      { image_id: 4, image_src: cmsPeople, image_caption: 'USER MANAGEMENT', image_seen: false },
+      { image_id: 5, image_src: cmsArticles, image_caption: 'BLOG SYSTEM', image_seen: false },
+      { image_id: 6, image_src: cmsRelatedData, image_caption: 'RELATED DATA', image_seen: false },
+      { image_id: 7, image_src: cmsPolyglot, image_caption: 'NEO4J & MONGO DB', image_seen: false },
+      { image_id: 8, image_src: cmsGraphQL, image_caption: 'GRAPHQL', image_seen: false },
+      { image_id: 9, image_src: cmsDashboards, image_caption: 'SERVER METRICS', image_seen: false },
     ],
     feature_conclusion: 'I am a systems thinker with an acute sense of patterns. If given the opportunity, I choose to work with a team of unique individuals that appreciate and utilize memes.',
+    feature_seen: false,
   },
   {
     category_id: 'projects',
@@ -86,16 +87,17 @@ export default [
       secondary: ['NODE.JS', 'GRAPHQL', 'NEO4J', 'MONGO DB'],
     },
     feature_images: [
-      { image_id: 0, image_src: workflowNavMenu, image_caption: 'NAVIGATION MENU' },
-      { image_id: 1, image_src: workflowSignUp, image_caption: 'REGISTRATION SYSTEM' },
-      { image_id: 2, image_src: workflowTaskBoard, image_caption: 'KANBAN BOARD' },
-      { image_id: 3, image_src: workflowAddLead, image_caption: 'CUSTOMER MANAGEMENT' },
-      { image_id: 4, image_src: workflowPasswordQuality, image_caption: 'PASSWORD ALGORITHM' },
-      { image_id: 5, image_src: workflowGeoLocation, image_caption: 'GOOGLE MAPS API' },
-      { image_id: 6, image_src: workflowPhotoSlider, image_caption: 'IMAGE SLIDER' },
-      { image_id: 7, image_src: graphQLFlyweight, image_caption: 'GRAPHQL' },
+      { image_id: 0, image_src: workflowNavMenu, image_caption: 'NAVIGATION MENU', image_seen: false },
+      { image_id: 1, image_src: workflowSignUp, image_caption: 'REGISTRATION SYSTEM', image_seen: false },
+      { image_id: 2, image_src: workflowTaskBoard, image_caption: 'KANBAN BOARD', image_seen: false },
+      { image_id: 3, image_src: workflowAddLead, image_caption: 'CUSTOMER MANAGEMENT', image_seen: false },
+      { image_id: 4, image_src: workflowPasswordQuality, image_caption: 'PASSWORD ALGORITHM', image_seen: false },
+      { image_id: 5, image_src: workflowGeoLocation, image_caption: 'GOOGLE MAPS API', image_seen: false },
+      { image_id: 6, image_src: workflowPhotoSlider, image_caption: 'IMAGE SLIDER', image_seen: false },
+      { image_id: 7, image_src: graphQLFlyweight, image_caption: 'GRAPHQL', image_seen: false },
     ],
     feature_conclusion: 'A rapidly growing skill and passion of mine is UI interactions during application events and state-changes. When I see things move in the browser, I see the mathematical art of motion tweens. In web browsers, there is a thing called jank. The nature of a render loop makes certain things expensive. It takes specific focus to ensure animations are buttery smooth across all devices that might encounter them. It also takes specific focus to account for Web Accessibility.',
+    feature_seen: false,
   },
   {
     category_id: 'projects',
@@ -109,13 +111,14 @@ export default [
       secondary: ['CREATE-REACT-APP', 'BABEL', 'ES LINT', 'JEST', 'PUPPETEER'],
     },
     feature_images: [
-      { image_id: 0, image_src: windowsMenu, image_caption: 'WINDOW-STATE MANAGER' },
-      { image_id: 1, image_src: windowsProperties, image_caption: 'ADAM PROPERTIES' },
-      { image_id: 2, image_src: windowsResume, image_caption: 'ADAM RESUME' },
-      { image_id: 3, image_src: windowsHobbies, image_caption: 'ADAM HOBBIES' },
-      { image_id: 4, image_src: windowsResponsive, image_caption: 'RESPONSIVE UI' },
+      { image_id: 0, image_src: windowsMenu, image_caption: 'WINDOW-STATE MANAGER', image_seen: false },
+      { image_id: 1, image_src: windowsProperties, image_caption: 'ADAM PROPERTIES', image_seen: false },
+      { image_id: 2, image_src: windowsResume, image_caption: 'ADAM RESUME', image_seen: false },
+      { image_id: 3, image_src: windowsHobbies, image_caption: 'ADAM HOBBIES', image_seen: false },
+      { image_id: 4, image_src: windowsResponsive, image_caption: 'RESPONSIVE UI', image_seen: false },
     ],
     feature_conclusion: 'I have a long-term vision for a portfolio demonstration that involves three operating systems: Windows, MacOS, and a Linux. Each one helps me augment a particular aspect of my skills and experience. For example, Windows is an environment that brings mood of the internet\'s early days. Windows 95 incorporated at-scale UX R&D which makes its UI patterns useful still for today\'s UX concerns. MacOS represents a medium that contrasts the dated UI of Windows and allows for inclusion of the highest quality graphics. A Linux-oriented environment helps me demonstrate command-line and data-analysis topics. This Windows experiment represents the structure for the first of the three environments.',
+    feature_seen: false,
   },
   {
     // COURSES
@@ -130,10 +133,11 @@ export default [
       secondary: ['CREATE-REACT-APP', 'BABEL', 'ES LINT', 'AXIOS'],
     },
     feature_images: [
-      { image_id: 0, image_src: burgerSignup, image_caption: 'CLIENTSIDE AUTH' },
-      { image_id: 1, image_src: burgerCreation, image_caption: 'SECURE CHECKOUT' },
+      { image_id: 0, image_src: burgerSignup, image_caption: 'CLIENTSIDE AUTH', image_seen: false },
+      { image_id: 1, image_src: burgerCreation, image_caption: 'SECURE CHECKOUT', image_seen: false },
     ],
     feature_conclusion: 'I recommend this course to anyone because of its use of immutable, functional JavaScript and also because of its use of scalable component-reuse techniques.',
+    feature_seen: false,
   },
   {
     category_id: 'courses',
@@ -147,10 +151,11 @@ export default [
       secondary: ['NPM', 'WEBPACK', 'BABEL', 'ES LINT', 'AJAX'],
     },
     feature_images: [
-      { image_id: 0, image_src: modernWeather, image_caption: 'WEATHER API' },
-      { image_id: 1, image_src: modernYoutube, image_caption: 'YOUTUBE API' },
+      { image_id: 0, image_src: modernWeather, image_caption: 'WEATHER API', image_seen: false },
+      { image_id: 1, image_src: modernYoutube, image_caption: 'YOUTUBE API', image_seen: false },
     ],
     feature_conclusion: 'I enjoyed this course because Stephen Grider did an amazing job not only explaining React and Redux architecture but also visually showing it. There was a lot of practical utility in building a YouTube API-consumer component and a weather app both using Ajax. The final project in this course involved a CRUD-based REST API and blog app.',
+    feature_seen: false,
   },
   {
     category_id: 'courses',
@@ -164,9 +169,10 @@ export default [
       secondary: ['NPM', 'WEBPACK', 'BABEL', 'ES LINT', 'AJAX'],
     },
     feature_images: [
-      { image_id: 0, image_src: advancedSignup, image_caption: 'JWT AUTH' },
+      { image_id: 0, image_src: advancedSignup, image_caption: 'JWT AUTH', image_seen: false },
     ],
     feature_conclusion: 'This course was a logical next-step for me after the Modern React and Redux course. It offered a fascinating twist by using an older version of React-Router and Redux-Form which are different APIs. Looking back, this was around the time I really started to understand and combine reactive programming with practices of server-side monadic and functor-based functional programming techniques in node.js. Functional Reactive Programming (FRP) reminds me a lot of Calculus in that functions can be composed to drastically simplify complex systems. Calculus relies on determinstic transformations for the same reasons that FRP prefers immutable, unidirectional data flow. That is simply another way to describe a deterministic transformation from point A to B.',
+    feature_seen: false,
   },
   {
     category_id: 'courses',
@@ -180,9 +186,10 @@ export default [
       secondary: ['NPM', 'WEBPACK', 'BABEL', 'ES LINT'],
     },
     feature_images: [
-      { image_id: 0, image_src: addSongs, image_caption: 'OPTIMISTIC UI' },
+      { image_id: 0, image_src: addSongs, image_caption: 'OPTIMISTIC UI', image_seen: false },
     ],
     feature_conclusion: 'Optimistic UI-updating is an Apollo Client feature that allows the app to assume a process will complete successfully and therefore show a result without waiting for a reply. This time savings makes for instant UI feedback and great UX. Along with optimistic UI, Apollo Client handles data pre-fetching easily. I haven\'t had a chance to implement it in a production app yet, but great performance and UX could potentially be unlocked because pre-fetching reduces later work on subsequent page loads.',
+    feature_seen: false,
   },
   {
     category_id: 'courses',
@@ -196,9 +203,10 @@ export default [
       secondary: ['UDP SOCKETS', 'CHILD PROCESSES', 'CHAT SERVERS', 'CHATBOTS'],
     },
     feature_images: [
-      { image_id: 0, image_src: chatBot, image_caption: 'CHATBOT' },
+      { image_id: 0, image_src: chatBot, image_caption: 'CHATBOT', image_seen: false },
     ],
     feature_conclusion: 'The course was timely for many reasons. Most notably, it laid the foundations for my understanding of the JavaScript event loop and call stack. The course went into some length about LIBUV and using C++ plugins in node.js. I built a few chat programs as we explored streams and UDP and TCP sockets. I recommend it to anyone looking to skill up in reactive programming or isomorphic JavaScript.',
+    feature_seen: false,
   },
   {
     category_id: 'courses',
@@ -212,11 +220,12 @@ export default [
       secondary: ['CREATE-REACT-NATIVE-APP', 'ES LINT', 'USER AUTHENTICATION', 'UI ANIMATIONS'],
     },
     feature_images: [
-      { image_id: 0, image_src: employeeManager, image_caption: 'EMPLOYEE MANAGER APP' },
-      { image_id: 1, image_src: techStack, image_caption: 'TECH STACK APP' },
-      { image_id: 2, image_src: albumPurchase, image_caption: 'ALBUM PURCHASE APP' },
+      { image_id: 0, image_src: employeeManager, image_caption: 'EMPLOYEE MANAGER APP', image_seen: false },
+      { image_id: 1, image_src: techStack, image_caption: 'TECH STACK APP', image_seen: false },
+      { image_id: 2, image_src: albumPurchase, image_caption: 'ALBUM PURCHASE APP', image_seen: false },
     ],
     feature_conclusion: 'I recently became interested in the animation of UI interactions. I did one year of a BSc. Major in Physics Degree at Vancouver Island University. Besides learning things about Physics, Math, and Economics that I use every day, I find 2D and 3D kinematics quite useful when it comes to animating the x, y, z axes. I am always looking for opportunities to implement beautiful app interactions. I enjoy the science behind bringing a design or idea to life.',
+    feature_seen: false,
   },
   {
     category_id: 'courses',
@@ -230,12 +239,13 @@ export default [
       secondary: ['REST API', 'MONGO DB', 'MONGOOSE.JS', 'PASSPORT.JS', 'ES LINT', 'BOOTSTRAP', 'EJS'],
     },
     feature_images: [
-      { image_id: 0, image_src: rgbGame, image_caption: 'ADVANCED DOM CONTROL' },
-      { image_id: 1, image_src: campsiteSignup, image_caption: 'AUTHENTICATION SYSTEM' },
-      { image_id: 2, image_src: campsiteAddNew, image_caption: 'REST API' },
-      { image_id: 3, image_src: campsiteComments, image_caption: 'COMMENTS SYSTEM' },
-      { image_id: 4, image_src: movieSearch, image_caption: 'MOVIE SEARCH API' },
+      { image_id: 0, image_src: rgbGame, image_caption: 'ADVANCED DOM CONTROL', image_seen: false },
+      { image_id: 1, image_src: campsiteSignup, image_caption: 'AUTHENTICATION SYSTEM', image_seen: false },
+      { image_id: 2, image_src: campsiteAddNew, image_caption: 'REST API', image_seen: false },
+      { image_id: 3, image_src: campsiteComments, image_caption: 'COMMENTS SYSTEM', image_seen: false },
+      { image_id: 4, image_src: movieSearch, image_caption: 'MOVIE SEARCH API', image_seen: false },
     ],
     feature_conclusion: 'This course is great for people that have not done JavaScript or CSS in a while and want to brush up on the DOM. With the course, a person could get up and running with REST endpoints and websites in node.js. I would consider this a great precursor to more complex APIs in node.js and to more complex Frontend clients.',
+    feature_seen: false,
   },
-]
+] /* eslint-enable object-curly-newline */

@@ -116,7 +116,6 @@
   background: none;
   padding: 3.2rem;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
   transition: all 250ms ease;
 }
 
@@ -131,7 +130,6 @@
   color: $adam-primary-lightgray;
   background-color: $adam-transparent-darkgray;
   border: 0.1rem solid green;
-  border-radius: 3px 3px 0 0;
 }
 
 #timeline .timeline-item .timeline-content:before {
@@ -322,7 +320,7 @@
 
 #info-wrapper {
   display: block;
-  width: calc(100vw - 3.2rem);
+  // width: calc(100vw - 3.2rem);
   padding: 0 3.2rem 3.2rem 3.2rem;
   overflow: none;
 }
