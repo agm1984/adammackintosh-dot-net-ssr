@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { hideNav, showNav } from '../../components/nav/nav_actions'
 import './Modal.css'
 
 class Modal extends Component {
@@ -9,12 +11,14 @@ class Modal extends Component {
     this.node = null
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    this.props.hideNav()
     document.addEventListener('keydown', this.handleOutsideClick, false)
     return document.addEventListener('mousedown', this.handleOutsideClick, false)
   }
 
   componentWillUnmount() {
+    this.props.showNav()
     document.removeEventListener('keydown', this.handleOutsideClick, false)
     return document.removeEventListener('mousedown', this.handleOutsideClick, false)
   }
@@ -75,10 +79,12 @@ Modal.defaultProps = {
 }
 Modal.propTypes = {
   show: PropTypes.bool,
+  hideNav: PropTypes.func.isRequired,
+  showNav: PropTypes.func.isRequired,
   backdropStyles: PropTypes.objectOf(PropTypes.any),
   modalStyles: PropTypes.objectOf(PropTypes.any),
   children: PropTypes.node,
   onClose: PropTypes.func.isRequired,
 }
 
-export default Modal
+export default connect(null, { hideNav, showNav })(Modal)

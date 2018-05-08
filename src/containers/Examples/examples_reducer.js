@@ -32,7 +32,8 @@ export default (state = initialState, action) => {
         examples: state.examples.map(feature => ({
           ...feature,
           feature_images: feature.feature_images.reduce((all, image) => {
-            if (image.image_id === action.payload) {
+            if ((feature.feature_id === action.payload.feature_id)
+              && (image.image_id === action.payload.image_id)) {
               all.push({ ...image, image_seen: true })
               return all
             }

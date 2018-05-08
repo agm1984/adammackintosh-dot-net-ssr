@@ -113,7 +113,10 @@ const ExampleContent = (props) => {
                 key={image.image_id}
                 to={`/examples/${category_id}/${feature_id}/${image.image_id}`}
                 className="example_image"
-                onClick={() => props.markImageSeen(image.image_id)}
+                onClick={() => props.markImageSeen({
+                  feature_id,
+                  image_id: image.image_id,
+                })}
                 title="Click to enlarge"
                 style={{
                   backgroundImage: `url(${image.image_src})`,
@@ -173,7 +176,7 @@ const ExampleContent = (props) => {
 
 ExampleContent.propTypes = {
   project: PropTypes.objectOf(PropTypes.any).isRequired,
-  markImageSeen: PropTypes.func.isRequired,
+  markImageSeen: PropTypes.func.isRequired, // eslint-disable-line react/no-unused-prop-types
   handleBackToExamples: PropTypes.func.isRequired,
 }
 

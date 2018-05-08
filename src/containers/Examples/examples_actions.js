@@ -6,9 +6,12 @@ export const markExampleSeen = project_id => ({
   payload: project_id,
 })
 
-export const markImageSeen = image_id => ({
+export const markImageSeen = ({ feature_id, image_id }) => ({
   type: MARK_IMAGE_SEEN,
-  payload: image_id,
+  payload: {
+    feature_id,
+    image_id,
+  },
 })
 
 export const handleBackToExamples = () => async dispatch =>

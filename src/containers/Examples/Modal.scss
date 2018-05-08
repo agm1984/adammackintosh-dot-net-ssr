@@ -44,7 +44,7 @@
   height: 80%;
   margin: 0;
   padding: 0;
-  z-index: -1;
+  z-index: 9999;
 }
 
 // CLOSE BUTTON
@@ -57,6 +57,7 @@
   padding: 1.6rem;
   background-color: $adam-transparent-darkgray;
   border: 0.1rem solid green;
+  z-index: 9999;
 }
 
 .modal_closeButton > svg {

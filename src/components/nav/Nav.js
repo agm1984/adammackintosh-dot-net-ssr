@@ -54,7 +54,7 @@ class Nav extends Component {
     const isScrolling = !!this.state.scrollPositionY
     const { pathname } = this.props.routing.location
     const activeStyle = { color: '#66FCF1' }
-    return (
+    return this.props.showNav && (
       <div className={(isScrolling) ? 'Nav isScrolling' : 'Nav'}>
         {(pathname !== '/skills') && (
           <div id="Nav_brand">
@@ -165,6 +165,7 @@ class Nav extends Component {
 
 Nav.propTypes = {
   children: PropTypes.node.isRequired,
+  showNav: PropTypes.bool.isRequired,
   updateScrollYPosition: PropTypes.func.isRequired,
   notifications: PropTypes.arrayOf(PropTypes.any).isRequired,
   removeNotification: PropTypes.func.isRequired,
@@ -173,6 +174,7 @@ Nav.propTypes = {
 
 const mapStateToProps = state => ({
   routing: state.routing,
+  showNav: state.nav.showNav,
   notifications: state.notifications.notifications,
 })
 
