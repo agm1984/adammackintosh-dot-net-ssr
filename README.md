@@ -1,6 +1,6 @@
 # adammackintosh.net - Frontend Client SSR
 
-> This React app features server-side rendering, react-helmet, and the result of several years of advanced meta data and SEO optimizations. Feel free to inspect.
+> This React app features server-side rendering, react-helmet, and advanced meta data and SEO optimizations. Feel free to inspect.
 
 **NOTE:** Some aspects of the app are the result of hundreds of hours of UI component building and fine tuning. Deep directory traversal is recommended for forensic analysis.
 
