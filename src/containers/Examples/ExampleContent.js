@@ -104,9 +104,7 @@ const ExampleContent = (props) => {
               className="example_header-photo"
               style={{ backgroundImage: `url(${feature_image})` }}
               title="Scroll down to see more"
-            >
-              <div className="examples_grid_feature-overlay" />
-            </div>
+            />
           </div>
         </div>
 

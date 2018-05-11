@@ -2,7 +2,7 @@
 
 > This React app features server-side rendering, react-helmet, and the result of several years of advanced meta data and SEO optimizations. Feel free to inspect.
 
-**NOTE:** Some aspects of the app are the result of hundreds of hours of UI component building and fine tuning. Deep directory traversing is recommended if forensic analysis is desired.
+**NOTE:** Some aspects of the app are the result of hundreds of hours of UI component building and fine tuning. Deep directory traversal is recommended for forensic analysis.
 
 ## Install ESLint
 > First, copy the contents of `.eslintrc.json` to clipboard, then:
