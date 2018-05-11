@@ -131,6 +131,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .examples_grid_feature-caption {
@@ -282,6 +283,7 @@
   font-weight: 200;
   letter-spacing: 0.2em;
   text-decoration: none;
+  white-space: nowrap;
   color: $adam-primary-white;
   outline: none;
   background: none;
@@ -664,6 +666,16 @@
   }
 }
 
+@media (max-width: 650px) {
+  #example_links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .example_links-link {
+    margin-top: 1.6rem;
+  }
+}
+
 @media (max-width: 600px) {
   #example-wrapper {
     padding: 28.8rem 3.2rem 3.2rem 3.2rem;
@@ -683,13 +695,6 @@
   }
   #example_header-right {
     padding: 1.6rem;
-  }
-  #example_links {
-    flex-direction: column;
-    align-items: center;
-  }
-  .example_links-link {
-    margin-top: 1.6rem;
   }
   .example_content-subheading {
     padding: 6.4rem 1.6rem 3.2rem 1.6rem;

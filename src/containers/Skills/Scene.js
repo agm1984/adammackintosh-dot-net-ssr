@@ -122,6 +122,9 @@ class Scene extends Component {
 
   handleDoubleClick() {
     this.currentAnimation += 1
+    if (this.currentAnimation === this.animations.length) {
+      this.currentAnimation = 1
+    }
     return this.fadeAction(this.animations[this.currentAnimation])
   }
 

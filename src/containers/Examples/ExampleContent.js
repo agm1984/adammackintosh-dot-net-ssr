@@ -31,8 +31,9 @@ const ExampleContent = (props) => {
     category_id,
     feature_id,
     feature_image,
-    feature_siteURL,
-    feature_sourceURL,
+    feature_URL_primary,
+    feature_URL_secondary,
+    feature_URL_tertiary,
     feature_summary,
     feature_tech,
     feature_images,
@@ -63,22 +64,39 @@ const ExampleContent = (props) => {
           <div id="example_header-left">
             <h2 id="example_heading">{feature_id}</h2>
             <div id="example_links">
-              <a
-                className="example_links-link"
-                href={feature_siteURL}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                VIEW SITE
-              </a>
-              <a
-                className="example_links-link"
-                href={feature_sourceURL}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                VIEW SOURCE
-              </a>
+              {feature_URL_primary.enabled && (
+                <a
+                  className="example_links-link"
+                  href={feature_URL_primary.url}
+                  rel="noopener noreferrer"
+                  title={feature_URL_primary.tooltip}
+                  target="_blank"
+                >
+                  {feature_URL_primary.label}
+                </a>
+              )}
+              {feature_URL_secondary.enabled && (
+                <a
+                  className="example_links-link"
+                  href={feature_URL_secondary.url}
+                  rel="noopener noreferrer"
+                  title={feature_URL_secondary.tooltip}
+                  target="_blank"
+                >
+                  {feature_URL_secondary.label}
+                </a>
+              )}
+              {feature_URL_tertiary.enabled && (
+                <a
+                  className="example_links-link"
+                  href={feature_URL_tertiary.url}
+                  rel="noopener noreferrer"
+                  title={feature_URL_tertiary.tooltip}
+                  target="_blank"
+                >
+                  {feature_URL_tertiary.label}
+                </a>
+              )}
             </div>
           </div>
           <div id="example_header-right">
