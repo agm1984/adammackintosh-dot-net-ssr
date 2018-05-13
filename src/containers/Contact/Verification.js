@@ -30,7 +30,7 @@ const Verification = (props) => {
         name={name}
         type={type}
         className={hasError}
-        tabindex={0}
+        tabIndex={0}
         {...input}
       />
       {touched && (error && (

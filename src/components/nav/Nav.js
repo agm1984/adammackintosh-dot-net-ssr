@@ -66,7 +66,7 @@ class Nav extends Component {
                 : 'activeRoute'}
               activeStyle={activeStyle}
               title="View Home"
-              tabindex={0}
+              tabIndex={0}
               role="banner"
               exact
             >

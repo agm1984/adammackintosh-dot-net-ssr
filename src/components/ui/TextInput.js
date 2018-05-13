@@ -28,7 +28,7 @@ const TextInput = (props) => {
         type={type}
         className={hasError}
         style={extraInputMargin}
-        tabindex={0}
+        tabIndex={0}
         {...input}
       />
       {touched && (error && (

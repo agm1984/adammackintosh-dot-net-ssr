@@ -28,7 +28,7 @@ class Story extends Component {
     <button
       id="downScroller"
       onClick={this.handleScrollDown}
-      tabindex={0}
+      tabIndex={0}
       title="Click or scroll down to see more"
     >
       ⇩

@@ -71,7 +71,7 @@ class Examples extends Component {
     <button
       id="downScroller"
       onClick={this.handleScrollDown}
-      tabindex={0}
+      tabIndex={0}
       title="Click or scroll down to see more"
     >
       ⇩
@@ -93,7 +93,7 @@ class Examples extends Component {
           className="examples_categories-button"
           activeClassName="isActiveCategory"
           onClick={() => this.handleSetActiveCategory('viewAll')}
-          tabindex={0}
+          tabIndex={0}
           title="Show everything"
           exact
         >

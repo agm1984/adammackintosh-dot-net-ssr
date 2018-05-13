@@ -22,7 +22,7 @@ const TextArea = (props) => {
           name={name}
           placeholder={placeholder}
           style={style}
-          tabindex={0}
+          tabIndex={0}
           {...input}
         />
       </div>
