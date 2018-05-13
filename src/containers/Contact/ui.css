@@ -74,8 +74,7 @@
   box-sizing: border-box;
   color: #A11A23;
   background-color: #eabea9;
-  border: 0.2rem solid #A11A23;
-  outline: 0; }
+  border: 0.2rem solid #A11A23; }
 
 .error::placeholder {
   color: #A11A23;

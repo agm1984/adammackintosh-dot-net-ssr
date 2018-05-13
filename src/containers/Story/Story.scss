@@ -167,7 +167,6 @@
   text-decoration: none;
   text-align: center;
   color: $adam-primary-white;
-  outline: none;
   background: none;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
@@ -325,6 +324,10 @@
   overflow: none;
 }
 
+#info-specialWrapper {
+  width: 160.0rem;
+}
+
 #info-container {
   display: flex;
 }
@@ -455,6 +458,12 @@
   height: 100%;
 }
 
+@media (max-width: 1664px) {
+  #info-specialWrapper {
+    width: 128.0rem;
+  }
+}
+
 @media (max-width: 1400px) {
   // A TEAM
   #team-container-wrapper {
@@ -472,6 +481,9 @@
     margin-bottom: 6.4rem;
   }
   // A BRIEF WORD
+  #info-specialWrapper {
+    width: 96.0rem;
+  }
   #info_split-container {
     flex-direction: column;
   }
@@ -486,6 +498,9 @@
     text-align: center;
   }
   // A BRIEF WORD
+  #info-specialWrapper {
+    width: 100%;
+  }
   #info-container {
     flex-direction: column;
     align-items: center;

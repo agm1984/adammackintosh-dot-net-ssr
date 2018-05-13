@@ -55,7 +55,7 @@ class Nav extends Component {
     const { pathname } = this.props.routing.location
     const activeStyle = { color: '#66FCF1' }
     return this.props.showNav && (
-      <div className={(isScrolling) ? 'Nav isScrolling' : 'Nav'}>
+      <div className={(isScrolling) ? 'Nav isScrolling' : 'Nav'} role="navigation">
         {(pathname !== '/skills') && (
           <div id="Nav_brand">
             <NavLink
@@ -66,6 +66,8 @@ class Nav extends Component {
                 : 'activeRoute'}
               activeStyle={activeStyle}
               title="View Home"
+              tabindex={0}
+              role="banner"
               exact
             >
               <div className="nav_adamLogo" />

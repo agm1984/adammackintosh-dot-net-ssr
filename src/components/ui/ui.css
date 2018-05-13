@@ -83,8 +83,7 @@
   color: #A11A23;
   background-color: #eabea9;
   border: 0.2rem solid #A11A23 !important;
-  z-index: 9999;
-  outline: 0; }
+  z-index: 9999; }
 
 .error::placeholder {
   color: #A11A23;

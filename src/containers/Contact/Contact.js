@@ -74,6 +74,7 @@ class Contact extends Component {
                 <button
                   id="contact_clipboard"
                   onClick={() => this.copyEmailToClipboard('adam@adammackintosh.net')}
+                  tabindex={0}
                 >
                   COPY TO CLIPBOARD
                 </button>

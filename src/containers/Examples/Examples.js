@@ -71,6 +71,7 @@ class Examples extends Component {
     <button
       id="downScroller"
       onClick={this.handleScrollDown}
+      tabindex={0}
       title="Click or scroll down to see more"
     >
       ⇩
@@ -92,17 +93,20 @@ class Examples extends Component {
           className="examples_categories-button"
           activeClassName="isActiveCategory"
           onClick={() => this.handleSetActiveCategory('viewAll')}
+          tabindex={0}
+          title="Show everything"
           exact
         >
           VIEW ALL
         </NavLink>
-        {getCategoryList(examples).map((category, tabIndex) => (
+        {getCategoryList(examples).map((category) => (
           <NavLink
             to={`/examples/${category}`}
             className="examples_categories-button"
             activeClassName="isActiveCategory"
             onClick={() => this.handleSetActiveCategory(category)}
-            tabIndex={tabIndex}
+            tabIndex={0}
+            title={`Show only ${category}`}
             key={category}
           >
             {category.toUpperCase()}

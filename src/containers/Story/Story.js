@@ -28,6 +28,7 @@ class Story extends Component {
     <button
       id="downScroller"
       onClick={this.handleScrollDown}
+      tabindex={0}
       title="Click or scroll down to see more"
     >
       ⇩
@@ -160,73 +161,75 @@ class Story extends Component {
 
           <h1 className="timeline-title timeline-bonusPadding">A BRIEF WORD</h1>
           <div id="info-wrapper">
-            <div id="info-container">
-              <div className="info_split">
-                <h3 className="info_split-title">to non-programmers</h3>
-                <div id="info_split-container">
-                  <div className="info_split-column">
-                    <h4 className="info_split-heading">work</h4>
-                    <p className="info_split-content">
-                      As a developer, I aim to write not only pragmatic and UX-enriched
-                      code but also empathetic and thorough technical documentation.
-                      I am always curious to learn new tools and techniques.
-                    </p>
-                  </div>
-                  <div className="info_split-column">
-                    <h4 className="info_split-heading">life</h4>
-                    <p className="info_split-content">
-                      I am introverted and creative and known for being light hearted,
-                      precise, and thorough. I decompress from work by going to
-                      the gym and cooking nice meals for other people.
-                      I like the chemistry behind balancing salty, sweet, sour, and hot.
-                    </p>
-                  </div>
-                  <div className="info_split-column">
-                    <h4 className="info_split-heading">balance</h4>
-                    <p className="info_split-content">
-                      Fitness &amp; nutrition has been a way of life for me for the past ten years.
-                      A healthy mind and optimized metabolic processes both start with
-                      optimized nutrient-intake.
-                    </p>
+            <div id="info-specialWrapper">
+              <div id="info-container">
+                <div className="info_split">
+                  <h3 className="info_split-title">to non-programmers</h3>
+                  <div id="info_split-container">
+                    <div className="info_split-column">
+                      <h4 className="info_split-heading">work</h4>
+                      <p className="info_split-content">
+                        As a developer, I aim to write not only pragmatic and UX-enriched
+                        code but also empathetic and thorough technical documentation.
+                        I am always curious to learn new tools and techniques.
+                      </p>
+                    </div>
+                    <div className="info_split-column">
+                      <h4 className="info_split-heading">life</h4>
+                      <p className="info_split-content">
+                        I am introverted and creative and known for being light hearted,
+                        precise, and thorough. I decompress from work by going to
+                        the gym and cooking nice meals for other people.
+                        I like the chemistry behind balancing salty, sweet, sour, and hot.
+                      </p>
+                    </div>
+                    <div className="info_split-column">
+                      <h4 className="info_split-heading">balance</h4>
+                      <p className="info_split-content">
+                        Fitness &amp; nutrition has been a way of life for me for the past ten years.
+                        A healthy mind and optimized metabolic processes both start with
+                        optimized nutrient-intake.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div id="info_split-divider" />
-              <div className="info_split">
-                <h3 className="info_split-title">to programmers</h3>
-                <div id="programmers-container">
-                  <p className="story_paragraph">
-                    I like JavaScript (JS) because it is a language made of atomic building blocks.
-                    A Function is a place to do work, like in Mathematics.
-                    This is fundamentally why I am passionate about deterministic transformations;
-                    they create predictable movement from point A to B like a math formula.
-                    Immutable Functional Programming allows a person to compose
-                    Functions together with minimized time and complexity
-                    provided the person follows some strict rules.
-                  </p>
-                  <p className="story_paragraph">
-                    The declarative-nature of Functional Programming
-                    matches up well with Objects, event streams, and state;
-                    immutability is important because shared state and side
-                    effects are very dangerous. Understanding the event loop and garbage
-                    collection helps a lot. Aiming for referential transparency helps even more.
-                  </p>
-                  <p className="story_paragraph">
-                    Some consider JS loose, and they are correct,
-                    but dynamic typing allows one to rapidly spool out logic
-                    in any desired direction.
-                    JS is a language of great productivity towards both APIs and apps.
-                    It is an isomorphic dominator. Reach out to me on Twitter if you want
-                    to pick up the conversation.
-                    I'd love to hear your thoughts or provide additional context.
-                  </p>
-                  <p className="story_paragraph">
-                    I would need more time to explain, but JS is great at managing streams
-                    of concurrent, potentially-unrelated actions and events
-                    while maximizing what I would call lossless IOPs (Input/Outputs per second).
-                    JS has everything I need to quickly create scalable,
-                    performant applications.
-                  </p>
+                <div id="info_split-divider" />
+                <div className="info_split">
+                  <h3 className="info_split-title">to programmers</h3>
+                  <div id="programmers-container">
+                    <p className="story_paragraph">
+                      I like JavaScript (JS) because it is a language made of atomic building blocks.
+                      A Function is a place to do work, like in Mathematics.
+                      This is fundamentally why I am passionate about deterministic transformations;
+                      they create predictable movement from point A to B like a math formula.
+                      Immutable Functional Programming allows a person to compose
+                      Functions together with minimized time and complexity
+                      provided the person follows some strict rules.
+                    </p>
+                    <p className="story_paragraph">
+                      The declarative-nature of Functional Programming
+                      matches up well with Objects, event streams, and state;
+                      immutability is important because shared state and side
+                      effects are very dangerous. Understanding the event loop and garbage
+                      collection helps a lot. Aiming for referential transparency helps even more.
+                    </p>
+                    <p className="story_paragraph">
+                      Some consider JS loose, and they are correct,
+                      but dynamic typing allows one to rapidly spool out logic
+                      in any desired direction.
+                      JS is a language of great productivity towards both APIs and apps.
+                      It is an isomorphic dominator. Reach out to me on Twitter if you want
+                      to pick up the conversation.
+                      I'd love to hear your thoughts or provide additional context.
+                    </p>
+                    <p className="story_paragraph">
+                      I would need more time to explain, but JS is great at managing streams
+                      of concurrent, potentially-unrelated actions and events
+                      while maximizing what I would call lossless IOPs (Input/Outputs per second).
+                      JS has everything I need to quickly create scalable,
+                      performant applications.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

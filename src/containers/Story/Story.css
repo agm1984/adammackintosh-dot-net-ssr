@@ -143,7 +143,6 @@
   text-decoration: none;
   text-align: center;
   color: #fff;
-  outline: none;
   background: none;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
@@ -269,6 +268,9 @@
   padding: 0 3.2rem 3.2rem 3.2rem;
   overflow: none; }
 
+#info-specialWrapper {
+  width: 160.0rem; }
+
 #info-container {
   display: flex; }
 
@@ -379,6 +381,10 @@
   width: 19.2rem;
   height: 100%; }
 
+@media (max-width: 1664px) {
+  #info-specialWrapper {
+    width: 128.0rem; } }
+
 @media (max-width: 1400px) {
   #team-container-wrapper {
     width: 100%; }
@@ -390,6 +396,8 @@
     max-width: 450px; }
   .btn {
     margin-bottom: 6.4rem; }
+  #info-specialWrapper {
+    width: 96.0rem; }
   #info_split-container {
     flex-direction: column; } }
 
@@ -399,6 +407,8 @@
     align-items: initial; }
   .timeline-title {
     text-align: center; }
+  #info-specialWrapper {
+    width: 100%; }
   #info-container {
     flex-direction: column;
     align-items: center; }

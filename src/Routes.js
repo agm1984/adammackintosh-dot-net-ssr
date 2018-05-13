@@ -113,6 +113,7 @@ class Routes extends Component {
                 className={isContact ? 'Nav_link-isContact' : 'Nav_link'}
                 activeClassName="activeRoute"
                 activeStyle={{ color: '#66FCF1' }}
+                tabindex={0}
                 title={tooltip}
               >
                 {key}

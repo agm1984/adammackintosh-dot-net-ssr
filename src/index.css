@@ -48,7 +48,6 @@ body {
   color: #014420;
   border: 0.1rem solid #014420;
   background: none;
-  outline: #212121;
   transition: all 250ms ease-in-out;
   user-select: none;
   z-index: 1; }
@@ -74,7 +73,6 @@ body {
   color: #45A29E;
   border: 0.1rem solid #45A29E;
   background: none;
-  outline: #212121;
   transition: all 250ms ease-in-out;
   user-select: none;
   z-index: 9999; }
