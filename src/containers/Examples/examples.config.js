@@ -163,7 +163,7 @@ export default [ /* eslint-disable object-curly-newline */
     },
     feature_URL_secondary: { enabled: false },
     feature_URL_tertiary: { enabled: false },
-    feature_summary: 'I was recently introduced to something called the Clock Angle Problem. I found it very difficult to discover the solution using first-principles reasoning, so I set out to understand the problem better. I built a React Native application using test-driven development that would allow me to use the Clock Angle formulas. What I didn\'t realize when I did this was that building an analog clock is not only difficult using CSS. It is extremely difficult in React Native because there is no transform-origin. It takes specific trigonometry to rotate clock hands at a central pivot point.',
+    feature_summary: 'I was recently introduced to the Clock Angle Problem. I wanted to understand the problem better. I built a React Native application using test-driven development that would allow me to organically converge on the Clock Angle formulas. Building an analog clock is difficult using CSS. It is additionally difficult in React Native because there is no transform-origin. It takes a bit of trigonometry to rotate clock hands from a central origin.',
     feature_tech: {
       primary: ['ES6+ JAVASCRIPT', 'REACT NATIVE'],
       secondary: ['CREATE-REACT-NATIVE-APP', 'BABEL', 'ES LINT', 'JEST', 'REACT-NATIVE-TEST-UTILS'],
@@ -172,7 +172,7 @@ export default [ /* eslint-disable object-curly-newline */
       { image_id: 0, image_src: clockAngle, image_caption: 'CLOCK ANGLE CALCULATOR', image_seen: false },
       { image_id: 1, image_src: clockUnitTest, image_caption: 'UNIT TESTING', image_seen: false },
     ],
-    feature_conclusion: 'I had a lot of fun building this app even though the math and CSS were quite brutal. This is exactly the type of app that should have lots of unit tests because of the finicky nature of clocks and all the moving parts. I would recommend building an analog clock to any developer because it\'s deceptively complex, assuming you like puzzles. Just watch out because React Native has no transform-origin CSS.',
+    feature_conclusion: 'I had a lot of fun building this app even though the math and CSS were fairly complex. This is a type of app that should have lots of unit tests because of the moving parts of a clock. I would recommend building an analog clock to any developer because it\'s deceptively complex, assuming you like puzzles.',
     feature_seen: false,
   },
   {
