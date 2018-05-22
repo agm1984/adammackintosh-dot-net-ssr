@@ -56,6 +56,9 @@ class Nav extends Component {
     const activeStyle = { color: '#66FCF1' }
     return this.props.showNav && (
       <div className={(isScrolling) ? 'Nav isScrolling' : 'Nav'} role="navigation">
+        {(pathname === '/skills') && (
+          <div id="Nav_brand" className="Nav_brand-skillsPageOnly" />
+        )}
         {(pathname !== '/skills') && (
           <div id="Nav_brand">
             <NavLink

@@ -13,11 +13,18 @@ class UserDetails extends Component {
       levelXP: 0,
       levelXPRequired: 1337,
     }
+    this.timers = {}
     if (start) {
       for (let i = 0; i < 20; i += 1) {
-        setTimeout(() => this.updateXP(), i * 100)
+        this.timers[i] = setTimeout(() => this.updateXP(), i * 100)
       }
       start = false
+    }
+  }
+
+  componentWillUnmount() {
+    for (let i = 0; i < 20; i += 1) {
+      clearInterval(this.timers[i])
     }
   }
 

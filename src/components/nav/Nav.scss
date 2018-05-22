@@ -25,6 +25,10 @@
   padding: 3.2rem 9.6rem 3.2rem 3.2rem;
 }
 
+.Nav_brand-skillsPageOnly {
+  margin-left: 6.4rem;
+}
+
 .nav_adamLogo {
   position: relative;
   min-width: 2.0rem;
@@ -196,6 +200,9 @@
   #Nav_brand {
     width: auto;
     padding: 3.2rem 0 0 0;
+  }
+  .Nav_brand-skillsPageOnly {
+    display: none;
   }
   #Nav_social {
     padding: 3.2rem 0 0 0;

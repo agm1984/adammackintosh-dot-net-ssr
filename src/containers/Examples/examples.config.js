@@ -24,6 +24,9 @@ import windowsProperties from './images/windows98/windows-adamProperties.gif'
 import windowsResume from './images/windows98/windows-adamResume.gif'
 import windowsHobbies from './images/windows98/windows-adamHobbies.gif'
 import windowsResponsive from './images/windows98/windows-responsive.gif'
+// Experiment: Clock Angle
+import clockAngle from './images/clockAngle/clockAngle.gif'
+import clockUnitTest from './images/clockAngle/clockUnitTest.gif'
 // Course: React 16
 import burgerSignup from './images/react16/burger-signup.gif'
 import burgerCreation from './images/react16/burger-creation.gif'
@@ -146,6 +149,30 @@ export default [ /* eslint-disable object-curly-newline */
       { image_id: 4, image_src: windowsResponsive, image_caption: 'RESPONSIVE UI', image_seen: false },
     ],
     feature_conclusion: 'I have a long-term vision for a portfolio demonstration that involves three operating systems: Windows, MacOS, and a Linux. Each one helps me augment a particular aspect of my skills and experience. For example, Windows is an environment that brings mood of the internet\'s early days. Windows 95 incorporated at-scale UX R&D which makes its UI patterns useful still for today\'s UX concerns. MacOS represents a medium that contrasts the dated UI of Windows and allows for inclusion of the highest quality graphics. A Linux-oriented environment helps me demonstrate command-line and data-analysis topics. This Windows experiment represents the structure for the first of the three environments.',
+    feature_seen: false,
+  },
+  {
+    category_id: 'projects',
+    feature_image: clockAngle,
+    feature_id: 'experiment: clock angle calculator',
+    feature_URL_primary: {
+      enabled: true,
+      label: 'VIEW SOURCE',
+      tooltip: 'View source code',
+      url: 'https://github.com/agm1984/rn-clock-angle',
+    },
+    feature_URL_secondary: { enabled: false },
+    feature_URL_tertiary: { enabled: false },
+    feature_summary: 'I was recently introduced to something called the Clock Angle Problem. I found it very difficult to discover the solution using first-principles reasoning, so I set out to understand the problem better. I built a React Native application using test-driven development that would allow me to use the Clock Angle formulas. What I didn\'t realize when I did this was that building an analog clock is not only difficult using CSS. It is extremely difficult in React Native because there is no transform-origin. It takes specific trigonometry to rotate clock hands at a central pivot point.',
+    feature_tech: {
+      primary: ['ES6+ JAVASCRIPT', 'REACT NATIVE'],
+      secondary: ['CREATE-REACT-NATIVE-APP', 'BABEL', 'ES LINT', 'JEST', 'REACT-NATIVE-TEST-UTILS'],
+    },
+    feature_images: [
+      { image_id: 0, image_src: clockAngle, image_caption: 'CLOCK ANGLE CALCULATOR', image_seen: false },
+      { image_id: 1, image_src: clockUnitTest, image_caption: 'UNIT TESTING', image_seen: false },
+    ],
+    feature_conclusion: 'I had a lot of fun building this app even though the math and CSS were quite brutal. This is exactly the type of app that should have lots of unit tests because of the finicky nature of clocks and all the moving parts. I would recommend building an analog clock to any developer because it\'s deceptively complex, assuming you like puzzles. Just watch out because React Native has no transform-origin CSS.',
     feature_seen: false,
   },
   {
